@@ -91,7 +91,7 @@ tagsInput.directive('tagsInput', function($timeout, $document, tagsInputConfig) 
 
         self.remove = function(index) {
             var tag = self.items.splice(index, 1)[0];
-            events.trigger('tag-removed', { $tag: tag });
+            events.trigger('tag-removed', { $tag: tag, $index: index });
             return tag;
         };
 
